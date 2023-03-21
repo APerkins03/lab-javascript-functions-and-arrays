@@ -96,14 +96,40 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsUnique) {
+  if (wordsUnique.length === 0) {
+    return null;
+  }
+  let emptyWords = [];
+  wordsUnique.forEach((element) => {
+    if (!emptyWords.includes(element)) {
+      emptyWords.push(element);
+    }
+  });
+  return emptyWords;
+}
+
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, search) {
+  if (wordsFind.length === 0) {
+    return null;
+  }
+  let emptyWords2;
+
+  for (let i = 0; i < wordsFind.length; i++) {
+    if (wordsFind === emptyWords2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return wordsFind.includes(search)
+}
 
 
 
@@ -122,7 +148,9 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes( wordsArr, wordSearch ) {
+  return wordsArr.filter( elm => elm === wordSearch).length
+}
 
 
 
